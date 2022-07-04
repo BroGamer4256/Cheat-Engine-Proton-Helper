@@ -25,7 +25,7 @@ prefixInstall="/home/$USER/.steam/steam"
 # These shouldn't change unless you installed Cheat Engine in a Wine prefix somewhere else.
 # By default, you will either need WINE installed separately with Cheat Engine installed in it, or you will need to copy the CE program files needed to your Proton Prefix.
 steamInstall="/home/$USER/.steam/"
-CEPrefix="/home/$USER/.wine"
+CEPrefix=$WINEPREFIX
 
 # Here's some flags you can tweak, although IIRC, ESync and FSync are required for Cheat Engine to function.
 proton=$2
@@ -38,7 +38,8 @@ TIMER_WAITTIME=5
 
 ## Script Functionality begins here: ##
 
-read -p 'Enter a Steam AppID: ' STEAMAPPID
+result=`python gui.py $steamInstall`
+STEAMAPPID="$result"
 
 # Don't mess with these variables, as they are necessary for this script to function.
 TIMES_TRIED=0
