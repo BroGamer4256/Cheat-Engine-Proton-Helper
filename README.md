@@ -20,6 +20,7 @@ I put this together after some looking around for some insights on how such a th
 ## Setup
 
 To download the script, and set up everything you need to:
+0. First install python 3, the vdf package from pip, and yad
 1. ```git clone https://gitlab.com/KingKrouch/cheat-engine-proton-helper.git``` in the terminal.
 2. Use ```cd Cheat-Engine-Proton-Helper``` to enter the cloned directory
 3. Use ```chmod +x ./setup.sh``` to mark the setup script as executable.
